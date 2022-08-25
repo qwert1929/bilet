@@ -2,15 +2,17 @@ import { Component, INJECTOR, Input, Output } from '@angular/core';
 import { TICKETS } from 'src/db-data';
 import { Ticket } from 'src/model/course';
 import { DOCUMENT } from '@angular/common';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.css']
 })
+
+
 export class PaymentComponent{
 
- 
 
 
   title = 'bilet';

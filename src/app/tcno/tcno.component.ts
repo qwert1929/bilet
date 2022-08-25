@@ -9,6 +9,7 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./tcno.component.css']
 })
 export class FiyatComponent implements OnInit {
+  x: number;
 
   constructor() { }
 
@@ -26,9 +27,10 @@ export class FiyatComponent implements OnInit {
       const onunbirlerbas = strtoplam.substring(strtoplam.length,strtoplam.length-1);
       
       if(onunbirlerbas == tcno.substring(10,11)) {
-        alert("doğru");
+        //alert("doğru");
+        console.log("girdi");
         this.fiyat = 50;
-        return this.fiyat;
+        return this.indirimli(this.fiyat);
       } 
       else{
         // alert("yanlış");
@@ -36,6 +38,13 @@ export class FiyatComponent implements OnInit {
         return this.fiyat;
       }
       
+    }
+
+    indirimli(x:number){
+
+      this.fiyat=(this.x*6)/10;
+
+      return this.fiyat;
     }
 
 }
