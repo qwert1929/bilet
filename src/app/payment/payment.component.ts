@@ -3,23 +3,19 @@ import { TICKETS } from 'src/db-data';
 import { Ticket } from 'src/model/course';
 import { DOCUMENT } from '@angular/common';
 
-var  a: number;
-var result;
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-payment',
+  templateUrl: './payment.component.html',
+  styleUrls: ['./payment.component.css']
 })
+export class PaymentComponent{
+
+ 
 
 
-
-export class AppComponent{
-
-  
   title = 'bilet';
   tickets = TICKETS;
 
-    //incele, close butonlarının çalışmasını sağlayan yapı
     div1:boolean=false;
     div2:boolean=true;
     div3:boolean=true;
@@ -31,16 +27,14 @@ export class AppComponent{
     }
 
 
-// siteyeGit(){
-//   window.open('https://www.biletantalya.com/Ticket/List/AntalyaAquarium',"_self");
-// }
-
+siteyeGit(){
+  window.open('https://www.biletantalya.com/Ticket/List/AntalyaAquarium',"_self");
+}
 constructor() { }
+
   ngOnInit(): void {
   }
-
-  }
-
-
-
-
+  
+    
+    
+}

@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body>
   <header>
     <div class="collapse bg-dark" id="navbarHeader">
       <div class="container">
@@ -60,7 +59,7 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
           <div class="card" *ngFor="let ticket of tickets;index as i" [index]="i+1">
-            <div><br></div>
+            
             <img class="resim" alt="yüklenemedi" [src]="ticket.iconUrl">
     
             <div class="başlık">
@@ -72,60 +71,27 @@
             <button class="btn btn-primary" class="button1" value="↓" (click)="div1Function()">
               İncele!
             </button>
-            <div class="yes-no">
-              
-            </div>
-            
               <div *ngIf="div1">
                 <div>Varsa TC kimlik no giriniz:</div>
 
                 <!-- eğer var denirse tc kimliği kontrol et ve geçerliyse yerel fiyar bastır değilse turist fiyatı
                 tc her halükarda alınabilir zaten uyumluluğu kontrol ediliyor ve var yok'a bakılıyor -->
-                  
-              <input name="tckimlikno" placeholder="tcno" type="text" id="tckimlikno" style="width:5.5cm; text-align: center;" (change)="tcKontrolFonk(tcno)" 
-                #tcno maxlength="11" />
-                <button>Enter</button>
-                <div class="output" >
-                  <p>
-                    Fiyat:{{ticket.fiyat}} 
-                  </p>
+                <app-tcno></app-tcno>
+                <app-fiyat></app-fiyat>
+                <app-payment></app-payment>
                 
-                <!-- <div *ngIf = 'tcKontrolFonk()'> <p> 
-                    'Tc kimlik no geçerli:'  
-                  </p> </div>
-                  <div *ngIf = "!tcKontrolFonk">
-                     <p>
-                    'geçersiz tc'
-                  </p>
-                  </div> -->
-                
-              <!-- <button class="buy" (click)="siteyeGit()">SATIN ALMAYA GİT </button> -->
-              <button class="button2" value="CLOSE" style="width:11cm ;" (click)="div2Function()">↑ CLOSE ↑</button>
+                <button class="button2" value="CLOSE" style="width:11cm ;" (click)="div2Function()">↑ CLOSE ↑</button>
+                       <br><br>
+            
               </div>
-              <div *ngIf="div2">
-              
-              </div>
-              
-              <br>
-              
+          </div>
 
-            <br>
-        </div>
-          
 
+          </div>
         </div>
-      </div>
+  
+  
       
-    </div>
-    
-  <footer class="text-muted py-5">
-    <div class="container">
-    
-    </div>
-  </footer>
-  
-  
-      <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   
 
 

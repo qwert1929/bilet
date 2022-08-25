@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './fiyat.component.html',
   styleUrls: ['./fiyat.component.css']
 })
-export class FiyatComponent implements OnInit {
+export class TcnoComponent implements OnInit {
 
   constructor() { }
 

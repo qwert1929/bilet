@@ -3,14 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FiyatComponent } from './fiyat/fiyat.component';
-import { TcnoComponent } from './tcno/tcno.component';
+import { PaymentComponent } from './payment/payment.component';
+import { TcnoComponent } from './fiyat/fiyat.component';
+import { FiyatComponent } from './tcno/tcno.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FiyatComponent,
-    TcnoComponent
+    TcnoComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
